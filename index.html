@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="../kit.fontawesome.com/650e805292.js" crossorigin="anonymous" defer></script>
+    <title>Manish Kumar</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+
+<body>
+    <div class="loader-wrapper" id="loader-wrapper1">
+        <div class="loader" id="loader1"></div>
+    </div>
+    <div>
+        
+    <header class="navbar">
+        <div class="logo">
+            
+            <img  src="assets/images/logo1.png" width="55" height="55" alt="CR" />
+            <!-- <i class="fas fa-laptop-code gradient-text"></i> -->
+            <div class="logo-text">
+                <div style="font-size: 1.5rem; margin-top: -.1rem;">Manish Kumar</div>
+                <div style="font-size: 1rem; margin-top: -.4rem;">DevOps Engineer</div>
+            </div>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        
+        <ul class="navbar__items">
+            <li class="navbar__items--item navbar__items--home" id="aboutNav" data-page="1" data-classname='about'>
+                <a href="#about">About me</a>
+                <div class="navbar-item-deactive"></div>
+            </li>
+            
+            <li class="navbar__items--item navbar__items--skills" id="skillsNav" data-page="2" data-classname='skills'>
+                <a href="#skills">My skills</a>
+                <div class="navbar-item-deactive"></div>
+            </li>
+            <li class="navbar__items--item navbar__items--projects" id="projectsNav" data-page="3"
+                data-classname='projects'>
+                <a href="#projects"> My projects</a>
+                <div class="navbar-item-deactive"></div>
+            </li>
+
+            <li class="navbar__items--item navbar__items--projects" id="projectsNav" data-page="3"
+            data-classname='Certification'>
+            <a href="#projects"> Certification</a>
+            <div class="navbar-item-deactive"></div>
+        </li>
+
+            <li class="navbar__items--item navbar__items--contact" id="contactNav" data-page="4"
+                data-classname='contact'>
+                <a href="#contact"> Contact me</a>
+                <div class="navbar-item-deactive"></div>
+            </li>
+            <li class="navbar__items--item navbar__items--contact" id="contactNav" 
+                data-classname='contact'>
+                <a
+                    onclick="window.open('https://drive.google.com/file/d/1NWZJthSdMHS-mlzsEXV-YkpkmDdjYzaL/view?usp=sharing')">
+                    My Resume</a>
+                <div class="navbar-item-deactive"></div>
+            </li>
+
+        </ul>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="pagesCube">
+                <div class="pagesCube__content pagesCube__content--about display-none" id="aboutPage" data-page="1">
+                    <div class="pageContainer">
+                        <div class="arrow-right">
+                            <div>
+                                <div class="arrow-handle rotate45degRight"></div>
+                                <div class="arrow-handle rotate-45degRight"></div>
+                                <a class="arrow-text" href="#skills">Skills</a>
+                            </div>
+
+                        </div>
+                        <div class="about-me-container">
+                            <div class="fluid-container">
+                                <h3 class="text-secondary">Hi, I'm</h3>
+                                <h1 class="text-primary">Manish Kumar</h1>
+                                <h3 class="text-secondary">I am a</h3>
+                                <h1 class="text-primary">DevOps Engineer & Web Developer</h1>
+                                <div class="btn-container">
+                                    <div class="btn-wrapper hvr-grow-shadow">
+                                        <a href="#projects">
+                                            <button type="button" id="projects-btn" data-page="3"
+                                                data-classname='projects' class="btn btn-primary hvr-grow-shadow">my
+                                                projects
+                                            </button>
+                                        </a>
+
+                                    </div>
+                                    <div class="btn-wrapper hvr-grow-shadow">
+                                        <a href="#skills">
+                                            <button type="button"
+                                                class="btn btn-secondary hvr-grow-shadow hvr-bounce-to-right"
+                                                data-page="2" data-classname='skills' id="my-skills-btn">my skills
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="header-image-container">
+                            <img src="assets/images/2.svg" class="header-image" alt="Programmer-img">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="pagesCube__content pagesCube__content--skills display-none" id="skillsPage" data-page="2">
+                    <div class="pageContainer skills-page-container">
+                        <div class="arrow-right">
+                            <div>
+                                <div class="arrow-handle rotate45degRight"></div>
+                                <div class="arrow-handle rotate-45degRight"></div>
+                                <a class="arrow-text" href="#projects">Projects</a>
+                            </div>
+
+                        </div>
+                        <div class="arrow-left">
+                            <div>
+                                <div class="arrow-handle rotate45degLeft"></div>
+                                <div class="arrow-handle rotate-45degLeft"></div>
+                                <a class="arrow-text" href="#about">About</a>
+                            </div>
+                        </div>
+
+                        <div class="frontend-skills-container">
+
+                            <div class="frontend-skills">
+                                <div>DevOps</div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><img src="assets/images/linux.svg" alt="linux-logo" style="height: 1.6rem;"></div>
+                                <div>Linux</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><i class="fab fa-css3-alt"></i></div>
+                                <div>Azure / AWS</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><img src="assets/images/docker.svg" alt="linux-logo" style="height: 1.6rem;"></div>
+                                <div>Docker</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><img src="assets/images/kubernetes.svg" alt="linux-logo" style="height: 1.6rem;"></div>
+                                <div>Kubernetes</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><img src="assets/images/terraform.svg" alt="redux-logo" style="height: 1.6rem;">
+                                </div>
+                                <div>Terraform</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><img src="assets/images/a.svg" alt="redux-logo" style="height: 1.6rem;"></div>
+                                <div>Ansible</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frontend-skills-item">
+                                <div><img src="assets/images/jenkins.svg" alt="redux-logo" style="height: 1.6rem;"></div>
+                                <div>Jenkins</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+
+
+                        <div class="other-skills-container">
+                            <div class="other-skills">Scripting</div>
+                            <div class="other-skills-item">
+                                <div><img src="assets/images/python.svg" alt="redux-logo" style="height: 1.6rem;"></div>
+                                <div>Python</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-skills-item">
+                                <div><img src="assets/images/script.svg" alt="redux-logo" style="height: 1.6rem;"></div>
+                                <div>Shell<br>Scripting</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-skills-item">
+                                <div><img src="assets/images/github.svg" alt="redux-logo" style="height: 1.6rem;"></div>
+                                <div>Git</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="backend-skills-container">
+                            <div class="backend-skills">Web Dev</div>
+                            <div class="backend-skills-item">
+                                <div><img src="assets/images/html5.svg" alt="html"
+                                    style="height: 2.5rem; margin-bottom: -.4rem;"></div>
+                                <div>HTML</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="backend-skills-item">
+                                <div><img src="assets/images/css3.svg" alt="css"
+                                        style="height: 2.5rem; margin-bottom: -.4rem;"></div>
+                                <div>CSS</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backend-skills-item">
+                                <div><img src="assets/images/bs.svg" alt="bs-logo"
+                                    style="height: 2.5rem; margin-bottom: -.4rem;"></div>
+                                <div>BootStrap</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backend-skills-item">
+                                <div><img src="assets/images/js.svg" alt="js-logo" style="height: 1.6rem;">
+                                </div>
+                                <div>JavaScript</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backend-skills-item">
+                                <div><img src="assets/images/figma.svg" alt="figma-logo" style="height: 1.6rem;">
+                                </div>
+                                <div>Figma</div>
+                                <div class="skills-item-hover-container">
+                                    <div class="skills-item-hover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <div class="pagesCube__content pagesCube__content--projects display-none" id="projectsPage"
+                    data-page="3">
+                    <div class="pageContainer projects-page-container">
+                        <div class="arrow-right">
+                            <div>
+                                <div class="arrow-handle rotate45degRight"></div>
+                                <div class="arrow-handle rotate-45degRight"></div>
+                                <a class="arrow-text" href="#contact">Contact</a>
+                            </div>
+
+                        </div>
+                        <div class="arrow-left">
+                            <div>
+                                <div class="arrow-handle rotate45degLeft"></div>
+                                <div class="arrow-handle rotate-45degLeft"></div>
+                                <a class="arrow-text" href="#skills">Skills</a>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- First Project Here -->
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <h1 style="color: rgb(21, 210, 160) ;">Projects</h1>
+                        </div>
+
+                        <div class="project-container">
+                            <div class="project-title gradient-text">REAL TIME PHISHING DETECTION USING ML</div>
+                            <div class="project-info">
+                                <div class="project-img">
+                                    <img src="assets/images/SZ.png" alt="movie-database"
+                                        style="width: 70%;">
+                                </div>
+                                <div class="project-description">
+                                    <div class="about-project-title">About this project</div>
+                                    <div class="main-text-description">Real-time phishing detection refers to the process of identifying and preventing phishing attacks 
+                                        in real-time as they occur. Phishing is a type of cyber-attack where attackers impersonate 
+                                        legitimate entities (such as banks, online services, or organizations) to deceive individuals into 
+                                        providing sensitive information, such as passwords, credit card details, or personal data..
+                                    </div>
+                                    <div class="about-project-title" style="width: 10.5rem;">Technologies used</div>
+                                    <div class="main-text-description">
+                                        <li style="display: flex; align-content: center; align-items: center; margin-bottom: .3rem;">
+                                            <i class="fab fa-bootstrap used-tech" style="font-size:1.1rem;"></i>Machine Learning</li>
+
+                                        <li style="display: flex; align-items: center;  margin-bottom: .3rem;"><i
+                                                class="fab fa-python used-tech" style="font-size:1.1rem;"></i>Python</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-html5 used-tech" style="font-size:1.2rem;"></i>HTML</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-css3-alt used-tech" style="font-size:1.2rem;"></i> CSS</li>
+                                                <li style="display: flex; margin-bottom: .3rem;"><i
+                                                    class="fab fa-python used-tech"></i> JavaScript </li>
+                                        <li style="display: flex; margin-bottom: .3rem;"><i
+                                                class="fab fa-python used-tech"></i> Django </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-btns">
+                                <div class="btn-wrapper hvr-grow-shadow">
+                                    <a href="https://github.com/maxmanishcosta/Phishing-Webiste-Detection-Using-ML.git">
+                                        <button type="button" id="projects-btn" data-page="3" data-classname='projects'
+                                            class="btn btn-primary hvr-grow-shadow">github
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- First Project Ends -->
+                        <div class="projects-scrollDown">Scroll for more <br><i class="fas fa-chevron-circle-down"></i>
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="project-container">
+                            <div class="project-title gradient-text">GameKart</div>
+                            <div class="project-info">
+                                <div class="project-img">
+                                    <img src="assets/images/gamekart.png" alt="movie-database" style="width: 70%;">
+                                </div>
+                                <div class="project-description">
+                                    <div class="about-project-title">About this project</div>
+                                    <div class="main-text-description">GameKart is an E-commerce site having some expertise in selling game-related material.
+                                         This venture is planned with the most trending plan drifts and is fully responsive.
+                                    </div>
+                                    <div class="about-project-title" style="width: 10.5rem;">Technologies used</div>
+                                    <div class="main-text-description">
+                                        <li style="display: flex; align-items: center;  margin-bottom: .3rem;"><i
+                                                class="fab fa-js used-tech" style="font-size:1.1rem;"></i>
+                                            Javascript</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-html5 used-tech" style="font-size:1.2rem;"></i>HTML</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-css3-alt used-tech" style="font-size:1.2rem;"></i> CSS
+                                        </li>
+                                        <li
+                                            style="display: flex; align-content: center; align-items: center; margin-bottom: .3rem;">
+                                            <i class="fab fa-bootstrap used-tech" style="font-size:1.1rem;"></i>
+                                            Bootstrap
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-btns">
+                                <div class="btn-wrapper hvr-grow-shadow">
+                                    <a href="https://chxtan.github.io/gamekart/">
+                                        <button type="button" id="projects-btn" data-page="3" data-classname='projects'
+                                            class="btn btn-primary hvr-grow-shadow">Website
+                                        </button>
+                                    </a>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="project-container">
+                            <div class="project-title gradient-text">Harry Potter World</div>
+                            <div class="project-info">
+                                <div class="project-img">
+                                    <img src="assets/images/hp2.png" alt="movie-database" style="width: 70%;">
+                                </div>
+                                <div class="project-description">
+                                    <div class="about-project-title">About this project</div>
+                                    <div class="main-text-description">Harry Potter World is a place for potter heads where they can download Harry Potter ebooks and Harry Potter wallpapers.
+                                    </div>
+                                    <div class="about-project-title" style="width: 10.5rem;">Technologies used</div>
+                                    <div class="main-text-description">
+                                        <li style="display: flex; align-items: center;  margin-bottom: .3rem;"><i
+                                                class="fab fa-js used-tech" style="font-size:1.1rem;"></i>
+                                            Javascript</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-html5 used-tech" style="font-size:1.2rem;"></i>HTML</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-css3-alt used-tech" style="font-size:1.2rem;"></i> CSS
+                                        </li>
+                                        <li
+                                            style="display: flex; align-content: center; align-items: center; margin-bottom: .3rem;">
+                                            <i class="fab fa-bootstrap used-tech" style="font-size:1.1rem;"></i>
+                                            Bootstrap
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-btns">
+                                <div class="btn-wrapper hvr-grow-shadow">
+                                    <a href="https://chxtan.github.io/Harry-Potter-Books//">
+                                        <button type="button" id="projects-btn" data-page="3" data-classname='projects'
+                                            class="btn btn-primary hvr-grow-shadow">Website
+                                        </button>
+                                    </a>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+
+                        <div class="project-container">
+                            <div class="project-title gradient-text">Coding Library</div>
+                            <div class="project-info">
+                                <div class="project-img">
+                                    <img src="assets/images/codinglib.png" alt="movie-database" style="width: 70%;">
+                                </div>
+                                <div class="project-description">
+                                    <div class="about-project-title">About this project</div>
+                                    <div class="main-text-description">Coding Library is the coding blog site which allows user to use the log-In system to upload there blogs.
+                                         This venture is planned with the most trending plan drifts and is fully responsive.
+                                    </div>
+                                    <div class="about-project-title" style="width: 10.5rem;">Technologies used</div>
+                                    <div class="main-text-description">
+                                        <li style="display: flex; align-items: center;  margin-bottom: .3rem;"><i
+                                                class="fab fa-js used-tech" style="font-size:1.1rem;"></i>
+                                            Javascript</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-html5 used-tech" style="font-size:1.2rem;"></i>HTML</li>
+                                        <li style="display: flex; align-items: center; margin-bottom: .3rem;"><i
+                                                class="fab fa-css3-alt used-tech" style="font-size:1.2rem;"></i> CSS
+                                        </li>
+                                        <li
+                                            style="display: flex; align-content: center; align-items: center; margin-bottom: .3rem;">
+                                            <i class="fab fa-bootstrap used-tech" style="font-size:1.1rem;"></i>
+                                            Bootstrap
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-btns">
+                                <div class="btn-wrapper hvr-grow-shadow">
+                                    <a href="https://chetanrakhra.github.io/coding-library/">
+                                        <button type="button" id="projects-btn" data-page="3" data-classname='projects'
+                                            class="btn btn-primary hvr-grow-shadow">Website
+                                        </button>
+                                    </a>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="pagesCube__content pagesCube__content--contact display-none" id="contactPage" data-page="4">
+                    <div class="pageContainer">
+                        <div class="arrow-left">
+                            <div>
+                                <div class="arrow-handle rotate45degLeft"></div>
+                                <div class="arrow-handle rotate-45degLeft"></div>
+                                <a class="arrow-text" href="#projects">Projects</a>
+                            </div>
+                        </div>
+
+                        <div class="form-container">
+                            <div>
+                                <img style="height: 200px;" src="assets/images/profile-pic.png" alt="Manish's-img">
+                            </div>
+                            <div class="loader-wrapper loader-out" id="loader-wrapper2"
+                                style="background-color: #ffffffe3;">
+                                <div class="loader" id="loader1"></div>
+                            </div>
+                            <div style="width: 100%;">
+                                <h1 style="text-align:center;" class="gradient-text">CONVEY YOUR MESSAGE</h1>
+                            </div>
+                            <br/>
+                            <div>
+                                <p><a href = "mailto: maxmanishcosta@gmail.com?subject = PortfolioFeedback" style="border: 2px solid green;">Click here to send an Email</a></p>
+                                <br/>
+                            <h3>I am avalible in almost every social platform.
+                                Discuss a project or just want to say hi ? My Inbox is always open for all.</h3>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-icons">
+                    <i class="fab fa-github" onclick="window.open('https://github.com/maxmanishcosta','_blank')"></i>
+                    <i class="fab fa-linkedin-in"
+                        onclick="window.open('https://www.linkedin.com/in/maxmanishcosta/')"></i>
+                    <i class="fab fa-whatsapp" onclick="window.open('https://wa.me/+917425816656','_blank')"></i>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+</div>
+</body>
+</html>
